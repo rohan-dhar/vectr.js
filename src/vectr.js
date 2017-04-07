@@ -7,12 +7,12 @@
 
 //Main global constructor/
 window.Vectr = function(p1, p2){
-	//If coordinated are provided as discreet parameters
+	//If coordinates are provided as discreet parameters
 	if(typeof p1 === "number" || typeof p1 === "string" || typeof p2 === "number" || typeof p2 === "string"){
 		this.x = ( !isNaN(p1) ) ? Number(p1) : 0;
 		this.y = ( !isNaN(p2) ) ? Number(p2) : 0;		
 
-	//If coordinated or angle and magnitude are provided as an object
+	//If coordinates or angle and magnitude are provided as an object
 	}else if(typeof p1 === "object"){
 		if(p1.x || p1.x === 0 || p1.y || p1.y === 0){
 			this.x = ( !isNaN(p1.x) ) ? Number(p1.x) : 0;
