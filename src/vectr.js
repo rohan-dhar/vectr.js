@@ -50,10 +50,12 @@ window.Vectr = function(p1, p2){
 
 **********************************************************************************/
 Vectr.toDegree = function(rad) {
+	(isNaN(rad)) ? rad = 1 : rad = Number(rad);
 	return rad * 180 / Math.PI;
 };
 
 Vectr.toRadian = function(deg) {
+	(isNaN(deg)) ? deg = 1 : deg = Number(deg);
 	return deg * Math.PI / 180;
 }
 
