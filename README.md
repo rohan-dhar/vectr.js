@@ -48,11 +48,13 @@ Creates a new Vectr object based on the parameters provided.
 Returns a new Vectr object.
 
 <h5>Example</h5>
+<pre>
 <code>
 var vec1 = new Vectr(10, 10); // Creates a new Vector with x = 10 and y = 10 
 var vec2 = new Vectr({x: 10, y: 10}); // Creates a new Vector with x = 10 and y = 10 
 var vec3 = new Vectr({magnitude: 10, angleDeg: 45}); // Creates a new Vector with a magnitude of 10 and an angle of 45 degree from the X axis
 </code>
+</pre>
 </li>
 </ul>
 
@@ -67,9 +69,11 @@ Converts and angle in degree to radian
 <code>deg</code>: Optional - The angle in degree to convert to radian. Should be a number. <br> Default: 1
 
 <h5>Examples</h5>
+<pre>
 <code>
 var rad = Vectr.toRadian(45); // deg contains the value 0.785398 (pi/4)
 </code>
+</pre>
 </li>
 
 
@@ -82,6 +86,7 @@ Converts and angle in degree to radian
 <code>radian</code>: Optional - The angle in radian to convert to degree. Should be a number. <br> Default: 1
 
 <h5>Examples</h5>
+<pre>
 <code>
 var deg = Vectr.toDegree(Math.PI/4); // deg contains the value 45
 </code>
@@ -120,12 +125,14 @@ Default: true
 Returns either a string or an array or an object depending on the supplied parameters.
 
 <h5>Examples</h5>
+<pre>
 <code>
 var v = new Vectr(10, 20);
 var str = v.getAs("string"); // str contains the value "x: 10, y = 20"
 var arr = v.getAs("array");  // arr contains an array [10, 20]
 var obj = v.getAs("object"); // obj contains an array {x: 10, y: 20}			
 </code>
+</pre>
 </li>
 
 <li>
@@ -139,10 +146,12 @@ Returns the magnitude of the Vectr.
 A number which is the magnitude of the Vectr.
 
 <h5>Examples</h5>
+<pre>
 <code>		
 var v = new Vectr(3, 4);
 var mag = v.magnitude(); //mag contains the value 5
 </code>
+</pre>
 </li>
 
 <li>
@@ -159,6 +168,7 @@ var mag = v.magnitude(); //mag contains the value 5
 <h5>Return values</h5>
 
 <h5>Examples</h5>
+<pre>
 <code>
 
 </code>
@@ -181,17 +191,20 @@ Returns the angle of the Vectr from the X axis.
 Returns a number specifying the angle of the Vectr from the X axis.
 
 <h5>Examples</h5>
+<pre>
 <code>
 var v = new Vectr(10, 10);
 var angle = v.angle();        //angle contains the value 0.785398 (pi/4)
 var angleDeg = v.angle(true); // angle contains the value 45
 </code>
+</pre>
 </li>
 
 <li>
 <h4><code>.direction()</code></h4>
 An alias for <code>.angle()</code>
-</li>
+</li></li>
+
 
 
 <li>
@@ -210,11 +223,13 @@ Returns the angle of the Vectr from the Y axis.
 Returns a number specifying the angle of the Vectr from the Y axis.
 
 <h5>Examples</h5>
+<pre>
 <code>
 var v = new Vectr(10, 10);
 var angle = v.verticalAngle();        //angle contains the value 0.785398 (pi/4)
 var angleDeg = v.verticalAngle(true); // angle contains the value 45
 </code>
+</pre>
 </li>
 
 </ul>
@@ -241,12 +256,14 @@ Adds a number or another Vectr to the Vectr and returns the Vectr. Is chainable.
 Returns a Vectr if <code>n</code> is a number or a Vectr. If <code>n</code> is not a valid number or Vectr, <code>.add()</code> returns <code>false</code>.
 
 <h5>Examples</h5>
+<pre>
 <code>
 var v = new Vectr(10, 20);
 v.add(10); //v is now (x: 20, y: 30)
 var v2 = v.add(10, true); //v is still (x: 20, y: 30) but v2 is (x: 30, y: 40), because the new parameter was true
 v2.add(v); // v2 is now (x: 50, y: 70);
 </code>
+</pre>
 </li>
 
 <li>
@@ -268,11 +285,13 @@ Adds a number or another Vectr's x component to the x component of the Vectr and
 Returns a Vectr if <code>n</code> is a number or a Vectr. If <code>n</code> is not a valid number or Vectr, <code>.add()</code> returns <code>false</code>.
 
 <h5>Examples</h5>
+<pre>
 <code>
 var v = new Vectr(10, 20);
 v.addX(10); //v is now (x: 20, y: 20)
 v.addX(v); //v is now (x: 40, y: 20)
 </code>
+</pre>
 </li>
 
 <li>
@@ -294,11 +313,13 @@ Adds a number or another Vectr's y component to the y component of the Vectr and
 Returns a Vectr if <code>n</code> is a number or a Vectr. If <code>n</code> is not a valid number or Vectr, <code>.add()</code> returns <code>false</code>.
 
 <h5>Examples</h5>
+<pre>
 <code>
 var v = new Vectr(10, 20);
 v.addY(10); //v is now (x: 10, y: 30)
 v.addY(v); //v is now (x: 10, y: 60)
 </code>
+</pre>
 </li>
 
 <li>
@@ -320,12 +341,14 @@ subtracts a number or another Vectr to the Vectr and returns the Vectr. Is chain
 Returns a Vectr if <code>n</code> is a number or a Vectr. If <code>n</code> is not a valid number or Vectr, <code>.subtract()</code> returns <code>false</code>.
 
 <h5>Examples</h5>
+<pre>
 <code>
 var v = new Vectr(10, 20);
 v.subtract(10); //v is now (x: 0, y: 10)
 var v2 = v.subtract(10, true); //v is still (x: 0, y: 10) but v2 is (x: -10, y: 0), because the new parameter was true
 v2.subtract(v); // v2 is now (x: -10, y: -10);
 </code>
+</pre>
 </li>
 
 <li>
@@ -347,11 +370,13 @@ subtracts a number or another Vectr's x component to the x component of the Vect
 Returns a Vectr if <code>n</code> is a number or a Vectr. If <code>n</code> is not a valid number or Vectr, <code>.subtract()</code> returns <code>false</code>.
 
 <h5>Examples</h5>
+<pre>
 <code>
 var v = new Vectr(20, 20);
 v.subtractX(10); //v is now (x: 10, y: 20)
 v.subtractX(v); //v is now (x: 0, y: 20)
 </code>
+</pre>
 </li>
 
 <li>
@@ -373,11 +398,13 @@ subtracts a number or another Vectr's y component to the y component of the Vect
 Returns a Vectr if <code>n</code> is a number or a Vectr. If <code>n</code> is not a valid number or Vectr, <code>.subtract()</code> returns <code>false</code>.
 
 <h5>Examples</h5>
+<pre>
 <code>
 var v = new Vectr(10, 20);
 v.subtractY(10); //v is now (x: 10, y: 10)
 v.subtractY(v); //v is now (x: 10, y: 0)
 </code>
+</pre>
 </li>
 
 
