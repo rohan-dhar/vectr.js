@@ -219,7 +219,7 @@ var angleDeg = v.verticalAngle(true); // angle contains the value 45
 
 </ul>
 
-<h3>Methods to perform arithmetic operations on one or more Vectrs
+<h3>Methods to perform arithmetic operations on one or more Vectrs</h3>
 
 <ul>
 <li>
