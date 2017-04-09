@@ -65,7 +65,7 @@ var vec3 = new Vectr({magnitude: 10, angleDeg: 45}); // Creates a new Vector wit
 Converts and angle in degree to radian
 
 <h5>Parameters</h5>
-<code>Vectr.toRadian(deg)</code>
+<code>Vectr.toRadian(deg)</code><br>
 <code>deg</code>: Optional - The angle in degree to convert to radian. Should be a number. <br> Default: 1
 
 <h5>Examples</h5>
@@ -82,7 +82,7 @@ var rad = Vectr.toRadian(45); // deg contains the value 0.785398 (pi/4)
 Converts and angle in degree to radian
 
 <h5>Parameters</h5>
-<code>Vectr.toDegree(radian)</code>
+<code>Vectr.toDegree(radian)</code><br>
 <code>radian</code>: Optional - The angle in radian to convert to degree. Should be a number. <br> Default: 1
 
 <h5>Examples</h5>
@@ -330,7 +330,7 @@ subtracts a number or another Vectr to the Vectr and returns the Vectr. Is chain
 <code>.subtract(n, new)</code>
 <ul>
 <li>
-<code>n</code>: Required - A number or a Vectr. If the <code>n</code> is a Vectr, x component of <code>n</code> is subtracted to the x of the Vectr and the y component of <code>n</code> is subtracted to the y of the Vectr. If <code>n</code> is a number, it is subtracted to both the x and y components of the Vectr.
+<code>n</code>: Required - A number or a Vectr. If the <code>n</code> is a Vectr, x component of <code>n</code> is subtracted from the x of the Vectr and the y component of <code>n</code> is subtracted from the y of the Vectr. If <code>n</code> is a number, it is subtracted from both the x and y components of the Vectr.
 </li>
 <li>
 <code>new</code>: Optional - A boolean specify if the subtract operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
@@ -356,10 +356,10 @@ v2.subtract(v); // v2 is now (x: -10, y: -10);
 subtracts a number or another Vectr's x component to the x component of the Vectr and returns the Vectr. Is chainable.
 
 <h5>Parameters</h5>
-<code>.subtract(n, new)</code>
+<code>.subtractX(n, new)</code>
 <ul>
 <li>
-<code>n</code>: Required - A number or a Vectr. If the <code>n</code> is a Vectr, x component of <code>n</code> is subtracted to the x of the Vectr but the y of the Vectr is unchanged. If <code>n</code> is a number, it is subtracted only to the x component of the Vectr.
+<code>n</code>: Required - A number or a Vectr. If the <code>n</code> is a Vectr, x component of <code>n</code> is subtracted from the x of the Vectr but the y of the Vectr is unchanged. If <code>n</code> is a number, it is subtracted only to the x component of the Vectr.
 </li>
 <li>
 <code>new</code>: Optional - A boolean specify if the subtract operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
@@ -384,10 +384,10 @@ v.subtractX(v); //v is now (x: 0, y: 20)
 subtracts a number or another Vectr's y component to the y component of the Vectr and returns the Vectr. Is chainable.
 
 <h5>Parameters</h5>
-<code>.subtract(n, new)</code>
+<code>.subtractX(n, new)</code>
 <ul>
 <li>
-<code>n</code>: Required - A number or a Vectr. If the <code>n</code> is a Vectr, y component of <code>n</code> is subtracted to the x of the Vectr but the y of the Vectr is unchanged. If <code>n</code> is a number, it is subtracted only to the y component of the Vectr.
+<code>n</code>: Required - A number or a Vectr. If the <code>n</code> is a Vectr, y component of <code>n</code> is subtracted from the x of the Vectr but the y of the Vectr is unchanged. If <code>n</code> is a number, it is subtracted only to the y component of the Vectr.
 </li>
 <li>
 <code>new</code>: Optional - A boolean specify if the subtract operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
@@ -403,6 +403,92 @@ Returns a Vectr if <code>n</code> is a number or a Vectr. If <code>n</code> is n
 var v = new Vectr(10, 20);
 v.subtractY(10); //v is now (x: 10, y: 10)
 v.subtractY(v); //v is now (x: 10, y: 0)
+</code>
+</pre>
+</li>
+
+
+<li>
+<h4><code>.multiply()</code></h4>
+Multiplies a number or another Vectr to the Vectr and returns the Vectr. Is chainable.
+
+<h5>Parameters</h5>
+<code>.multiply(n, new)</code>
+<ul>
+<li>
+<code>n</code>: Required - A number or a Vectr. If the <code>n</code> is a Vectr, x component of <code>n</code> is multiplied to the x of the Vectr and the y component of <code>n</code> is multiplied to the y of the Vectr. If <code>n</code> is a number, it is multiplied to both the x and y components of the Vectr.
+</li>
+<li>
+<code>new</code>: Optional - A boolean specify if the multiply operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
+</li>
+</ul>
+
+<h5>Return values</h5>
+Returns a Vectr if <code>n</code> is a number or a Vectr. If <code>n</code> is not a valid number or Vectr, <code>.multiply()</code> returns <code>false</code>.
+
+<h5>Examples</h5>
+<pre>
+<code>
+var v = new Vectr(10, 20);
+v.multiply(10); //v is now (x: 0, y: 10)
+var v2 = v.multiply(10, true); //v is still (x: 0, y: 10) but v2 is (x: -10, y: 0), because the new parameter was true
+v2.multiply(v); // v2 is now (x: -10, y: -10);
+</code>
+</pre>
+</li>
+
+<li>
+<h4><code>.multiplyX()</code></h4>
+multiplies a number or another Vectr's x component to the x component of the Vectr and returns the Vectr. Is chainable.
+
+<h5>Parameters</h5>
+<code>.multiplyX(n, new)</code>
+<ul>
+<li>
+<code>n</code>: Required - A number or a Vectr. If the <code>n</code> is a Vectr, x component of <code>n</code> is multiplied to the x of the Vectr but the y of the Vectr is unchanged. If <code>n</code> is a number, it is multiplied only to the x component of the Vectr.
+</li>
+<li>
+<code>new</code>: Optional - A boolean specify if the multiply operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
+</li>
+</ul>
+
+<h5>Return values</h5>
+Returns a Vectr if <code>n</code> is a number or a Vectr. If <code>n</code> is not a valid number or Vectr, <code>.multiply()</code> returns <code>false</code>.
+
+<h5>Examples</h5>
+<pre>
+<code>
+var v = new Vectr(20, 20);
+v.multiplyX(10); //v is now (x: 10, y: 20)
+v.multiplyX(v); //v is now (x: 0, y: 20)
+</code>
+</pre>
+</li>
+
+<li>
+<h4><code>.multiplyY()</code></h4>
+multiplies a number or another Vectr's y component to the y component of the Vectr and returns the Vectr. Is chainable.
+
+<h5>Parameters</h5>
+<code>.multiplyX(n, new)</code>
+<ul>
+<li>
+<code>n</code>: Required - A number or a Vectr. If the <code>n</code> is a Vectr, y component of <code>n</code> is multiplied to the x of the Vectr but the y of the Vectr is unchanged. If <code>n</code> is a number, it is multiplied only to the y component of the Vectr.
+</li>
+<li>
+<code>new</code>: Optional - A boolean specify if the multiply operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
+</li>
+</ul>
+
+<h5>Return values</h5>
+Returns a Vectr if <code>n</code> is a number or a Vectr. If <code>n</code> is not a valid number or Vectr, <code>.multiply()</code> returns <code>false</code>.
+
+<h5>Examples</h5>
+<pre>
+<code>
+var v = new Vectr(10, 20);
+v.multiplyY(10); //v is now (x: 10, y: 10)
+v.multiplyY(v); //v is now (x: 10, y: 0)
 </code>
 </pre>
 </li>
