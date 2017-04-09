@@ -819,7 +819,7 @@ v.roundOffY(); // v is now x: 10.99, y: 11
 
 <li>
 <h4><code>.swapXY()</code></h4>
-Swaps the x and y components of the Vectr.
+Swaps the x and y components of the Vectr. Is chainable.
 
 <h5>Parameters</h5>
 <code>.swapXY(onNew)</code>
@@ -843,7 +843,7 @@ v.swapXY(); // v is now x: 20, y: 10
 
 <li>
 <h4><code>.rotateTo()</code></h4>
-Rotates the Vectr to the specified angle from the X axis.
+Rotates the Vectr to the specified angle from the X axis. Is chainable.
 
 <h5>Parameters</h5>
 <code>.rotateTo(angle, deg, new)</code>
@@ -874,7 +874,7 @@ v.rotateTo(90, true); // v now is x: 0, y: 14.1421356237
 
 <li>
 <h4><code>.rotateBy()</code></h4>
-Rotates the Vectr by the specified angle from the X axis. It adds the specified angle to the current angle of the Vectr.
+Rotates the Vectr by the specified angle from the X axis. It adds the specified angle to the current angle of the Vectr. Is chainable.
 
 <h5>Parameters</h5>
 <code>.rotateBy(angle, deg, new)</code>
