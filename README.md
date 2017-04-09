@@ -878,13 +878,51 @@ Rotates the Vectr to the specified angle from the X axis.
 </li>
 
 <li>
-<code>new</code>: Optional - A boolean specifying if the swapXY operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
+<code>new</code>: Optional - A boolean specifying if the rotateTo operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
 </li>
 </ul>
 
 <h5>Return values</h5>
 Returns a Vectr if the angle is a valid Number. If the angle is not valid, returns false.
 
+<h5>Example</h5>
+<code>
+var v = new Vectr(10, 10);
+v.rotateTo(90, true); // v now is x: 0, y: 14.1421356237
+</code>
+
 </li>
+
+<li>
+<h4><code>.rotateBy()</code></h4>
+Rotates the Vectr by the specified angle from the X axis. It adds the specified angle to the current angle of the Vectr.
+
+<h5>Parameters</h5>
+<code>.rotateBy(angle, deg, new)</code>
+<ul>
+<li>
+<code>angle</code>: Required - The angle to rotate the Vectr by. Must be a number.
+</li>
+
+<li>
+<code>deg</code>: Optional - A boolean specifying if the angle provided is in degree instead of radian <br>Default: false
+</li>
+
+<li>
+<code>new</code>: Optional - A boolean specifying if the rotateBy operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
+</li>
+</ul>
+
+<h5>Return values</h5>
+Returns a Vectr if the angle is a valid Number. If the angle is not valid, returns false.
+
+<h5>Example</h5>
+<code>
+var v = new Vectr(10, 10);
+v.rotateBy(45, true); // v now is x: 0, y: 14.1421356237
+</code>
+
+</li>
+
 
 </ul>
