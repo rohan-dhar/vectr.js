@@ -58,6 +58,24 @@ var vec3 = new Vectr({magnitude: 10, angleDeg: 45}); // Creates a new Vector wit
 </li>
 </ul>
 
+<h3>Properties</h3>
+<ul>
+<li><code>.x</code></li>
+The component of the Vectr. It is a number.
+
+<li><code>.y</code></li>
+The component of the Vectr. It is a number.
+
+</ul>
+<h4>Example</h4>
+<pre>	
+<code>
+var v = new Vectr({magnitude: Math.sqrt(200), angleDeg: 45});
+var vx = v.x; //vx contains the value 10
+var vy = v.y; //vx contains the value 10
+</code>
+</pre>
+
 <h3>Helper functions</h3>
 <ul>
 <li>
