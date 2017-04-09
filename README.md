@@ -581,27 +581,6 @@ v.divideY(v); //v is now (x: 20, y: 1)
 <h3>Methods to modify the components of a Vectr is some way</h3>
 
 <li>
-<h4><code></code></h4>
-
-<h5>Parameters</h5>
-<code></code>
-<ul>
-<li>
-
-</li>
-</ul>
-
-<h5>Return values</h5>
-
-<h5>Examples</h5>
-<pre>
-<code>
-
-</code>
-
-</li>
-
-<li>
 <h4><code>.normalize()</code></h4>
 Normalizes the Vectr (converts it to a unit vector). Is chainable.
 
