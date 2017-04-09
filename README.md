@@ -324,7 +324,7 @@ v.addY(v); //v is now (x: 10, y: 60)
 
 <li>
 <h4><code>.subtract()</code></h4>
-subtracts a number or another Vectr to the Vectr and returns the Vectr. Is chainable.
+Subtracts a number or another Vectr form the Vectr and returns the Vectr. Is chainable.
 
 <h5>Parameters</h5>
 <code>.subtract(n, new)</code>
@@ -353,7 +353,7 @@ v2.subtract(v); // v2 is now (x: -10, y: -10);
 
 <li>
 <h4><code>.subtractX()</code></h4>
-subtracts a number or another Vectr's x component to the x component of the Vectr and returns the Vectr. Is chainable.
+Subtracts a number or another Vectr's x component from the x component of the Vectr and returns the Vectr. Is chainable.
 
 <h5>Parameters</h5>
 <code>.subtractX(n, new)</code>
@@ -381,7 +381,7 @@ v.subtractX(v); //v is now (x: 0, y: 20)
 
 <li>
 <h4><code>.subtractY()</code></h4>
-subtracts a number or another Vectr's y component to the y component of the Vectr and returns the Vectr. Is chainable.
+Subtracts a number or another Vectr's y component from the y component of the Vectr and returns the Vectr. Is chainable.
 
 <h5>Parameters</h5>
 <code>.subtractX(n, new)</code>
@@ -439,7 +439,7 @@ v2.multiply(v); // v2 is now (x: 100000, y: 400000);
 
 <li>
 <h4><code>.multiplyX()</code></h4>
-multiplies a number or another Vectr's x component to the x component of the Vectr and returns the Vectr. Is chainable.
+Multiplies a number or another Vectr's x component to the x component of the Vectr and returns the Vectr. Is chainable.
 
 <h5>Parameters</h5>
 <code>.multiplyX(n, new)</code>
@@ -467,7 +467,7 @@ v.multiplyX(v); //v is now (x: 40000, y: 20)
 
 <li>
 <h4><code>.multiplyY()</code></h4>
-multiplies a number or another Vectr's y component to the y component of the Vectr and returns the Vectr. Is chainable.
+Multiplies a number or another Vectr's y component to the y component of the Vectr and returns the Vectr. Is chainable.
 
 <h5>Parameters</h5>
 <code>.multiplyX(n, new)</code>
@@ -489,6 +489,91 @@ Returns a Vectr if <code>n</code> is a number or a Vectr. If <code>n</code> is n
 var v = new Vectr(10, 10);
 v.multiplyY(10); //v is now (x: 10, y: 100)
 v.multiplyY(v); //v is now (x: 10, y: 10000)
+</code>
+</pre>
+</li>
+
+<li>
+<h4><code>.divide()</code></h4>
+Divides the the Vectr by a number or another Vectr. Is chainable.
+
+<h5>Parameters</h5>
+<code>.divide(n, new)</code>
+<ul>
+<li>
+<code>n</code>: Required - A number or a Vectr. If the <code>n</code> is a Vectr, x component of <the Vectr is divided by the x of code>n</code> and the y component of the Vectr is divided by the y of the code>n</code>. If <code>n</code> is a number, it is divides both the x and y components of the Vectr.
+</li>
+<li>
+<code>new</code>: Optional - A boolean specify if the divide operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
+</li>
+</ul>
+
+<h5>Return values</h5>
+Returns a Vectr if <code>n</code> is a number or a Vectr. If <code>n</code> is not a valid number or Vectr, <code>.divide()</code> returns <code>false</code>.
+
+<h5>Examples</h5>
+<pre>
+<code>
+var v = new Vectr(100, 200);
+v.divide(10); //v is now (x: 10, y: 20)
+var v2 = v.divide(10, true); //v is still (x: 10, y: 20) but v2 is (x: 1, y: 2), because the new parameter was true
+v2.divide(v); // v2 is now (x: 0.1, y: 0.1);
+</code>
+</pre>
+</li>
+
+<li>
+<h4><code>.divideX()</code></h4>
+Divides the the Vectr's x component by a number or another Vectr's x component. Is chainable.
+
+<h5>Parameters</h5>
+<code>.divideX(n, new)</code>
+<ul>
+<li>
+<code>n</code>: Required - A number or a Vectr. If the <code>n</code> is a Vectr, x component of the Vectr is divided by the x of the <code>n</code> but the y of the Vectr is unchanged. If <code>n</code> is a number, it is divides only to the x component of the Vectr.
+</li>
+<li>
+<code>new</code>: Optional - A boolean specify if the divide operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
+</li>
+</ul>
+
+<h5>Return values</h5>
+Returns a Vectr if <code>n</code> is a number or a Vectr. If <code>n</code> is not a valid number or Vectr, <code>.divide()</code> returns <code>false</code>.
+
+<h5>Examples</h5>
+<pre>
+<code>
+var v = new Vectr(20, 20);
+v.divideX(10); //v is now (x: 2, y: 20)
+v.divideX(v); //v is now (x: 1, y: 20)
+</code>
+</pre>
+</li>
+
+<li>
+<h4><code>.divideY()</code></h4>
+Divides the the Vectr's Y component by a number or another Vectr's Y component. Is chainable.
+
+<h5>Parameters</h5>
+<code>.divideY(n, new)</code>
+<ul>
+<li>
+<code>n</code>: Required - A number or a Vectr. If the <code>n</code> is a Vectr, Y component of the Vectr is divided by the Y of the <code>n</code> but the y of the Vectr is unchanged. If <code>n</code> is a number, it is divides only to the Y component of the Vectr.
+</li>
+<li>
+<code>new</code>: Optional - A boolean specify if the divide operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
+</li>
+</ul>
+
+<h5>Return values</h5>
+Returns a Vectr if <code>n</code> is a number or a Vectr. If <code>n</code> is not a valid number or Vectr, <code>.divide()</code> returns <code>false</code>.
+
+<h5>Examples</h5>
+<pre>
+<code>
+var v = new Vectr(20, 20);
+v.divideY(10); //v is now (x: 20, y: 2)
+v.divideY(v); //v is now (x: 20, y: 1)
 </code>
 </pre>
 </li>
