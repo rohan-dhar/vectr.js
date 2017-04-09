@@ -142,9 +142,6 @@ Vectr.prototype.normalize = function(onNew){
 	return this.divide(magnitude, onNew);
 }
 
-Vectr.prototype.unit = function(onNew){
-	return this.normalize(onNew);
-}
 
 Vectr.prototype.invert = function(onNew){
 	if(onNew){
@@ -172,7 +169,7 @@ Vectr.prototype.invertY = function(onNew){
 	}
 }
 
-Vectr.prototype.absolute = function(onNew){
+Vectr.prototype.abs = function(onNew){
 	if(onNew){
 		return new Vectr(Math.abs(this.x), Math.abs(this.y));
 	}else{	
@@ -181,7 +178,7 @@ Vectr.prototype.absolute = function(onNew){
 		return this;
 	}
 }
-Vectr.prototype.absoluteX = function(onNew){
+Vectr.prototype.absX = function(onNew){
 	if(onNew){
 		return new Vectr(Math.abs(this.x), this.y);
 	}else{	
@@ -189,7 +186,7 @@ Vectr.prototype.absoluteX = function(onNew){
 		return this;
 	}
 }
-Vectr.prototype.absoluteY = function(onNew){
+Vectr.prototype.absY = function(onNew){
 	if(onNew){
 		return new Vectr(this.x, Math.abs(this.y));
 	}else{	
@@ -223,7 +220,7 @@ Vectr.prototype.roundOffY = function(onNew){
 }
 
 Vectr.prototype.swapXY = function(){
-	var t = this.x;
+	var t = this.x;		
 	this.x = this.y;
 	this.y = t;
 }

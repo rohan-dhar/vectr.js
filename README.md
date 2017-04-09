@@ -76,6 +76,8 @@ var vy = v.y; //vx contains the value 10
 </code>
 </pre>
 
+<b>Users can directly work with the properties of a Vectr to perform any operation which may or may be included in Vectr.js out of the box.</b>
+
 <h3>Helper functions</h3>
 <ul>
 <li>
@@ -172,26 +174,6 @@ var mag = v.magnitude(); //mag contains the value 5
 </pre>
 </li>
 
-<li>
-<h4><code></code></h4>
-
-<h5>Parameters</h5>
-<code></code>
-<ul>
-<li>
-
-</li>
-</ul>
-
-<h5>Return values</h5>
-
-<h5>Examples</h5>
-<pre>
-<code>
-
-</code>
-
-</li>
 
 <li>
 <h4><code>.angle()</code></h4>
@@ -519,7 +501,7 @@ Divides the the Vectr by a number or another Vectr. Is chainable.
 <code>.divide(n, new)</code>
 <ul>
 <li>
-<code>n</code>: Required - A number or a Vectr. If the <code>n</code> is a Vectr, x component of <the Vectr is divided by the x of code>n</code> and the y component of the Vectr is divided by the y of the code>n</code>. If <code>n</code> is a number, it is divides both the x and y components of the Vectr.
+<code>n</code>: Required - A number or a Vectr. If the <code>n</code> is a Vectr, x component of the Vectr is divided by the x of <code>n</code> and the y component of the Vectr is divided by the y of the code>n</code>. If <code>n</code> is a number, it is divides both the x and y components of the Vectr.
 </li>
 <li>
 <code>new</code>: Optional - A boolean specify if the divide operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
@@ -596,5 +578,313 @@ v.divideY(v); //v is now (x: 20, y: 1)
 </pre>
 </li>
 
+<h3>Methods to modify the components of a Vectr is some way</h3>
+
+<li>
+<h4><code></code></h4>
+
+<h5>Parameters</h5>
+<code></code>
+<ul>
+<li>
+
+</li>
+</ul>
+
+<h5>Return values</h5>
+
+<h5>Examples</h5>
+<pre>
+<code>
+
+</code>
+
+</li>
+
+<li>
+<h4><code>.normalize()</code></h4>
+Normalizes the Vectr (converts it to a unit vector). Is chainable.
+
+<h5>Parameters</h5>
+<code>.normalize(onNew)</code>
+<ul>
+<li>
+<code>new</code>: Optional - A boolean specifying if the normalize operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
+</li>
+</ul>
+
+<h5>Return values</h5>
+Returns a Vectr.
+
+<h5>Examples</h5>
+<pre>
+<code>
+var v = new Vectr(10, 10);
+v.normalize(); // v is now x: 1.41421356237, y: 1.41421356237
+</code>
+
+</li>
+
+<li>
+<h4><code>.invert()</code></h4>
+Inverts the signs of the x and y components of the Vectr. Is chainable.
+
+<h5>Parameters</h5>
+<code>.invert(onNew)</code>
+<ul>
+<li>
+<code>new</code>: Optional - A boolean specifying if the invert operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
+</li>
+</ul>
+
+<h5>Return values</h5>
+Returns a Vectr.
+
+<h5>Examples</h5>
+<pre>
+<code>
+var v = new Vectr(-10, 10);
+v.invert(); // v is now x: 10, y: -10
+</code>
+
+</li>
+
+<li>
+<h4><code>.invertX()</code></h4> 
+Inverts the sign of the x component of the Vectr. Is chainable.
+
+<h5>Parameters</h5>
+<code>.invertX(onNew)</code>
+<ul>
+<li>
+<code>new</code>: Optional - A boolean specifying if the invert operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
+</li>
+</ul>
+
+<h5>Return values</h5>
+Returns a Vectr.
+
+<h5>Examples</h5>
+<pre>
+<code>
+var v = new Vectr(-10, 10);
+v.invertX(); // v is now x: 10, y: 10
+</code>
+</li>
+
+<li>
+<h4><code>.invertY()</code></h4>
+Inverts the sign of the Y component of the Vectr. Is chainable.
+
+<h5>Parameters</h5>
+<code>.invertY(onNew)</code>
+<ul>
+<li>
+<code>new</code>: Optional - A boolean specifying if the invert operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
+</li>
+</ul>
+
+<h5>Return values</h5>
+Returns a Vectr.
+
+<h5>Examples</h5>
+<pre>
+<code>
+var v = new Vectr(-10, 10);
+v.invertY(); // v is now x: -10, y: -10
+</code>
+</li>
+
+
+<li>
+<h4><code>.abs()</code></h4>
+Converts the values of the x and y components of the Vectr to be positive. Is chainable.
+
+<h5>Parameters</h5>
+<code>.abs(onNew)</code>
+<ul>
+<li>
+<code>new</code>: Optional - A boolean specifying if the rounding off operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
+</li>
+</ul>
+
+<h5>Return values</h5>
+Returns a Vectr.
+
+<h5>Examples</h5>
+<pre>
+<code>
+var v = new Vectr(-10, 10);
+v.abs(); // v is now x: 10, y: 10
+</code>
+
+</li>
+
+<li>
+<h4><code>.absX()</code></h4>
+Converts the value of the x component of the Vectr to be positive. Is chainable.
+
+<h5>Parameters</h5>
+<code>.absX(onNew)</code>
+<ul>
+<li>
+<code>new</code>: Optional - A boolean specifying if the abs operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
+</li>
+</ul>
+
+<h5>Return values</h5>
+Returns a Vectr.
+
+<h5>Examples</h5>
+<pre>
+<code>
+var v = new Vectr(-10, 10);
+v.absX(); // v is now x: 10, y: 10
+</code>
+</li>
+
+<li>
+<h4><code>.absY()</code></h4>
+Converts the value of the Y component of the Vectr to be positive. Is chainable.
+
+<h5>Parameters</h5>
+<code>.absY(onNew)</code>
+<ul>
+<li>
+<code>new</code>: Optional - A boolean specifying if the abs operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
+</li>
+</ul>
+
+<h5>Return values</h5>
+Returns a Vectr.
+
+<h5>Examples</h5>
+<pre>
+<code>
+var v = new Vectr(-10, 10);
+v.absY(); // v is now x: -10, y: 10
+</code>
+</li>
+
+
+
+<li>
+<h4><code>.roundOff()</code></h4>
+Rounds off the values of the x and y components of the Vectr. Is chainable.
+
+<h5>Parameters</h5>
+<code>.roundOff(onNew)</code>
+<ul>
+<li>
+<code>new</code>: Optional - A boolean specifying if the roundOff operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
+</li>
+</ul>
+
+<h5>Return values</h5>
+Returns a Vectr.
+
+<h5>Examples</h5>
+<pre>
+<code>
+var v = new Vectr(10.42, 10.8);
+v.roundOff(); // v is now x: 10, y: 11
+</code>
+
+</li>
+
+<li>
+<h4><code>.roundOffX()</code></h4>
+Rounds off the value of the x component of the Vectr. Is chainable.
+
+<h5>Parameters</h5>
+<code>.roundOffX(onNew)</code>
+<ul>
+<li>
+<code>new</code>: Optional - A boolean specifying if the roundOff operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
+</li>
+</ul>
+
+<h5>Return values</h5>
+Returns a Vectr.
+
+<h5>Examples</h5>
+<pre>
+<code>
+var v = new Vectr(10.3, 10.99);
+v.roundOffX(); // v is now x: 10, y: 10.99
+</code>
+</li>
+
+<li>
+<h4><code>.roundOffY()</code></h4>
+Rounds off the value of the Y component of the Vectr. Is chainable.
+
+<h5>Parameters</h5>
+<code>.roundOffY(onNew)</code>
+<ul>
+<li>
+<code>new</code>: Optional - A boolean specifying if the roundOff operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
+</li>
+</ul>
+
+<h5>Return values</h5>
+Returns a Vectr.
+
+<h5>Examples</h5>
+<pre>
+<code>
+var v = new Vectr(10.99, 10.99);
+v.roundOffY(); // v is now x: 10.99, y: 11
+</code>
+</li>
+
+<li>
+<h4><code>.swapXY()</code></h4>
+Swaps the x and y components of the Vectr.
+
+<h5>Parameters</h5>
+<code>.swapXY(onNew)</code>
+<ul>
+<li>
+<code>new</code>: Optional - A boolean specifying if the swapXY operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
+</li>
+</ul>
+
+<h5>Return values</h5>
+Returns a Vectr.
+
+<h5>Examples</h5>
+<pre>
+<code>
+var v = new Vectr(10, 20);
+v.swapXY(); // v is now x: 20, y: 10
+</code>
+
+</li>
+
+<li>
+<h4><code>.rotateTo()</code></h4>
+Rotates the Vectr to the specified angle from the X axis.
+
+<h5>Parameters</h5>
+<code>.rotateTo(angle, deg, new)</code>
+<ul>
+<li>
+<code>angle</code>: Required - The angle to rotate the Vectr to. Must be a number.
+</li>
+
+<li>
+<code>deg</code>: Optional - A boolean specifying if the angle provided is in degree instead of radian <br>Default: false
+</li>
+
+<li>
+<code>new</code>: Optional - A boolean specifying if the swapXY operation should be performed on a new Vectr without affecting the value of the current Vectr. If <code>new</code> is true, a brand new Vectr is returned, else the same Vectr is returned.
+</li>
+</ul>
+
+<h5>Return values</h5>
+Returns a Vectr if the angle is a valid Number. If the angle is not valid, returns false.
+
+</li>
 
 </ul>
