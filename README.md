@@ -128,9 +128,9 @@ Returns either a string or an array or an object depending on the supplied param
 <pre>
 <code>
 var v = new Vectr(10, 20);
-var str = v.getAs("string"); // str contains the value "x: 10, y = 20"
-var arr = v.getAs("array");  // arr contains an array [10, 20]
-var obj = v.getAs("object"); // obj contains an array {x: 10, y: 20}			
+var str = v.getAs("string"); // str contains the value   "x: 10, y = 20"
+var arr = v.getAs("array");  // arr contains an array:   [10, 20]
+var obj = v.getAs("object"); // obj contains an object:  {x: 10, y: 20}			
 </code>
 </pre>
 </li>
@@ -430,9 +430,9 @@ Returns a Vectr if <code>n</code> is a number or a Vectr. If <code>n</code> is n
 <pre>
 <code>
 var v = new Vectr(10, 20);
-v.multiply(10); //v is now (x: 0, y: 10)
-var v2 = v.multiply(10, true); //v is still (x: 0, y: 10) but v2 is (x: -10, y: 0), because the new parameter was true
-v2.multiply(v); // v2 is now (x: -10, y: -10);
+v.multiply(10); //v is now (x: 100, y: 200)
+var v2 = v.multiply(10, true); //v is still (x: 100, y: 200) but v2 is (x: 1000, y: 2000), because the new parameter was true
+v2.multiply(v); // v2 is now (x: 100000, y: 400000);
 </code>
 </pre>
 </li>
@@ -459,8 +459,8 @@ Returns a Vectr if <code>n</code> is a number or a Vectr. If <code>n</code> is n
 <pre>
 <code>
 var v = new Vectr(20, 20);
-v.multiplyX(10); //v is now (x: 10, y: 20)
-v.multiplyX(v); //v is now (x: 0, y: 20)
+v.multiplyX(10); //v is now (x: 200, y: 20)
+v.multiplyX(v); //v is now (x: 40000, y: 20)
 </code>
 </pre>
 </li>
@@ -486,9 +486,9 @@ Returns a Vectr if <code>n</code> is a number or a Vectr. If <code>n</code> is n
 <h5>Examples</h5>
 <pre>
 <code>
-var v = new Vectr(10, 20);
-v.multiplyY(10); //v is now (x: 10, y: 10)
-v.multiplyY(v); //v is now (x: 10, y: 0)
+var v = new Vectr(10, 10);
+v.multiplyY(10); //v is now (x: 10, y: 100)
+v.multiplyY(v); //v is now (x: 10, y: 10000)
 </code>
 </pre>
 </li>
